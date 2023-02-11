@@ -29,7 +29,7 @@
 			body {
 				font-family: 'poppins', sans-serif;
 				box-sizing: border-box;
-				background: var(--bgcolor);
+				background: #fff;
 				/*height: 1000vh;*/
 				/*overflow-x: hidden;*/
 			}
@@ -40,7 +40,7 @@
 				width: 100%;
 				padding: 2vh;
 				background-color: #fff;
-				box-shadow: 0vh 0vh 0.1vh black;
+				/*box-shadow: 0vh 0vh 0.1vh black;*/
 				justify-content: space-between;
 				align-items: center;
 				transition: 0.5s;
@@ -54,11 +54,13 @@
 				color: black;
 				background-color: transparent;
 				backdrop-filter: blur(10px);
-				box-shadow: 0vh 0vh 0.1vh black;
+				box-shadow: 0vh 0vh 0.4vh black;
 				transition: 0.5s;
+				padding: 2vh;
 			}
 
 			.head h2 {
+				position: relative;
 				font-size: 4vh;
 				color: orange;
 				z-index: 2;
@@ -120,6 +122,9 @@
 				margin-top: 2vh;
 			}
 
+			#about	{
+				margin-top: 20vh;
+			}
 
 			#about img {
 				position: relative;
@@ -127,7 +132,7 @@
 				display: block;
 				margin: auto;
 				border-radius: 1vh;
-				box-shadow: 0.5vh 1vh 2vh black;
+				box-shadow: 0.3vh 0.3vh 1vh black;
 			}
 
 			#about h1 {
@@ -165,31 +170,41 @@
 			}
 
 			#blog {
-				background-color: #fff;
+				background-color: var(--bgcolor);
 				padding-bottom: 10vh;
 				transition: 0.5s;
 			}
 
-			#blog h1, h3{
+			#blog h1 {
 				text-align: center;
 			}
 			#blog h3 {
+				text-align: center;
 				opacity: 0.5;
+			}
+
+			#blog p {
+				opacity: 0.7;
 			}
 
 			#blog img {
 				border-radius: 1vh;
-				box-shadow: 1vh 0.5vh 1vh black;
+				box-shadow: 0.3vh 0.3vh 1vh black;
 			}
 
 			#blog a {
 				position: relative;
-				top: 2vh;
+				top: 1vh;
+				font-size: 3vh;
 				color: #fff;
-				padding: 1vh;
+				/*padding: 1vh;*/
 				border-radius: 1vh;
-				background-image: linear-gradient(to right bottom, #2b5876, #4e4376);
+				color: darkcyan;
 				text-decoration: none;
+			}
+
+			#blog a:hover {
+				text-decoration: underline;
 			}
 
 			#blog h4 {
@@ -252,12 +267,12 @@
 			}
 
 			#foot {
-				background-color: black;
+				background-color: /*#22B048*/ darkcyan;
 				color: #fff;
 			}
 
 			#foot p {
-				opacity: 0.5;
+				opacity: 0.8;
 			}
 
 			#foot .mnu ul li {
@@ -307,16 +322,17 @@
 				position: fixed;
 				font-size: 3vh;
 				font-weight: bold;
-				right: -200px;
+				right: -370px;
 				top: 70px;
 				line-height: 10vh;
-				padding: 5vh;
-				width: 100px;
+				padding: 3vh;
+				width: 200px;
 				height: auto;
 				background-color: #fff;
 				z-index: 999;
 				transition: 0.5s;
 				display: none;
+				box-shadow: 0vh 0vh 0.2vh black;
 			}
 
 			.slide {
@@ -334,9 +350,19 @@
 				color: black;
 			}
 
-			.navbar ul li a:hover {
-				text-decoration: underline;
+			.navbar ul li a .text {
+				position: relative;
+				left: 1vh;
+				opacity: 0.8;
+				transition: 0.5s;
 			}
+
+			.navbar ul li a .text:hover {
+				position: relative;
+				left: 1.5vh;
+				opacity: 1;
+				transition: 0.5s;
+			} 
 
 			@media only screen and (max-width: 768px) {
 				.navbar {
@@ -344,7 +370,15 @@
 				}
 				
 				.head {
-					padding: 15px;	
+					padding: 10px;	
+				}
+
+				.head h2 {
+					left: 2vh;
+				}
+
+				.ya {
+					padding: 15px;
 				}
 				.head nav {
 					display: none;
@@ -357,6 +391,14 @@
 					display: block;
 					color: orange;
 				}
+			}
+
+			.hr hr {
+				position: relative;
+				top: 19vh;
+				margin-right: 5vh;
+				margin-left: 5vh;
+				box-shadow: 0vh 0.3vh 0.5vh black;
 			}
 		</style>
 	</head>
@@ -390,16 +432,36 @@
 		<nav class="navbar">
 			<ul>
 				<li class="list">
-					<a href="#home">Home</a>
+					<a href="#home">
+						<span class="icon"><i class="fa fa-home"></i></span>
+						<span class="text">
+							Home
+						</span>
+					</a>
 				</li>
 				<li class="list">
-					<a href="#about">About</a>
+					<a href="#about">
+						<span class="icon"><i class="fa-solid fa-address-card"></i></span>
+						<span class="text">
+							About
+						</span>
+					</a>
 				</li>
 				<li class="list">
-					<a href="#blog">Blog</a>
+					<a href="#blog">
+						<span class="icon"><i class="fa-brands fa-blogger-b"></i></span>
+						<span class="text">
+							Blog 
+						</span>
+					</a>
 				</li>
 				<li class="list">
-					<a href="#contact">Contact</a>
+					<a href="#contact">
+						<span class="icon"><i class="fa-solid fa-phone"></i></span>
+						<span class="text">
+							Contact 
+						</span>
+					</a>
 				</li>
 			</ul>
 		</nav>
@@ -415,8 +477,13 @@
 			</div>
 		</section>
 		<!-- SECTION HOME END -->
+
+		<div class="hr">
+			<hr>
+		</div>
+
 		<section class="cntn" id="about">
-			<img src="salkn.jpeg" alt="ROMLI SUHANDA" height="200">
+			<img src="salkn.jpeg" alt="ROMLI SUHANDA" width="250">
 			<br>
 			<h1>ABOUT ME</h1>
 			<br>
@@ -428,22 +495,22 @@
 			<div class="sosmed">
 				<ul>
 					<li class="fb">
-						<a href="https://facebook.com/romzz103">
+						<a href="https://facebook.com/romzz103" target="_blank">
 							<i class="fa fa-facebook"></i>
 						</a>
 					</li>
 					<li class="wa">
-						<a href="https://wa.me/6281322667077">
+						<a href="https://wa.me/6281322667077" target="_blank">
 							<i class="fa fa-whatsapp"></i>
 						</a>
 					</li>
 					<li class="ig">
-						<a href="https://instagram.com/romli_suhanda">
+						<a href="https://instagram.com/romli_suhanda" target="_blank">
 							<i class="fa fa-instagram"></i>
 						</a>
 					</li>
 					<li class="gh">
-						<a href="https://github.com/romlisuhanda">
+						<a href="https://github.com/romlisuhanda" target="_blank">
 							<i class="fa fa-github"></i>
 						</a>
 					</li>
@@ -538,22 +605,22 @@
 			<div class="akhir">
 				<ul>
 					<li>
-						<a href="https://facebook.com/romzz103">
+						<a href="https://facebook.com/romzz103" target="_blank">
 							<i class="fa fa-facebook"></i>
 						</a>
 					</li>
 					<li>
-						<a href="https://wa.me/6281322667077">
+						<a href="https://wa.me/6281322667077" target="_blank">
 							<i class="fa fa-whatsapp"></i>
 						</a>
 					</li>
 					<li>
-						<a href="https://instagram.com/romli_suhanda">
+						<a href="https://instagram.com/romli_suhanda" target="_blank">
 							<i class="fa fa-instagram"></i>
 						</a>
 					</li>
 					<li>
-						<a href="https://github.com/romlisuhanda">
+						<a href="https://github.com/romlisuhanda" target="_blank">
 							<i class="fa fa-github"></i>
 						</a>
 					</li>
