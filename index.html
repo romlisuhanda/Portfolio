@@ -3,10 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Romli Suhanda | Portfolio</title>
+		<title>ROMLI SUHANDA</title>
 		<!-- <link rel="stylesheet" type="text/css" href="css/css.css"> -->
 		
-		<link rel="shortcut icon" href="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2023/02/10/3853279200.jpg">
+		<!-- <link rel="shortcut icon" href="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2023/02/10/3853279200.jpg">
+ -->
+		<link rel="icon" type="image/jpg" href="ROMLI.jpeg">
 
 		<style type="text/css">
 			
@@ -96,8 +98,9 @@
 			}
 
 			#home {
-				background-image: linear-gradient(to right bottom, #0c97fa, #16e1f5);
-				color: #181818;
+				/*background-image: linear-gradient(to right bottom, #0c97fa, #16e1f5);*/
+				color: #fff;
+				background-color: #181818;
 				/*margin-left: 5vh;*/
 				border-radius: 2vh 2vh 0vh 0vh;
 				width: 40vh;
@@ -114,7 +117,7 @@
 			.cntn .btn button {
 				padding: 2vh;
 				border: none;
-				background-color: #181818;
+				background-color: black;
 				color: #fff;
 				border-radius: 10vh;
 				font-weight: bold;
@@ -398,6 +401,38 @@
 				top: 19vh;
 				box-shadow: 0vh 0.3vh 0.5vh black;
 			}
+
+			#game {
+				background-color: #ffff;
+				/*text-align: center;*/
+			}
+
+			#game h1 {
+				text-align: center;
+				on
+			}
+
+			#game h3 {
+				text-align: center;
+				opacity: 0.5;
+			}    
+
+			#game img {
+				border-radius: 1vh;
+				box-shadow: 0.3vh 0.3vh 1vh black;
+			}
+
+			#game p {
+				font-weight: bold;
+				opacity: 0.5;
+			}
+
+			#game a {
+				color: darkcyan;
+				text-decoration: none;
+				font-weight: 900;
+				font-size: 3vh;
+			}
 		</style>
 	</head>
 	<body>
@@ -464,17 +499,17 @@
 			</ul>
 		</nav>
 
-		<!-- SECTION HOME START -->
+		<!-- SECTION HOME AWAL -->
 		<section class="cntn" id="home">
 			<h1>ROMLI SUHANDA</h1>
-			<h3>SMPN 03 CIHAMPELAS</h3>
+			<h3>Front End Dev</h3>
 			<div class="btn">
 				<button>
 					Hubungi Saya!
 				</button>
 			</div>
 		</section>
-		<!-- SECTION HOME END -->
+		<!-- SECTION HOME AKHIR -->
 
 		<div class="hr">
 			<hr>
@@ -513,6 +548,43 @@
 						</a>
 					</li>
 				</ul>
+			</div>
+		</section>
+
+		<section class="cntn" id="game">
+			<h1>GAME</h1>
+			<br>
+			<h3>Game Yang Dirancang Menggunkan <br> HTML dan JAVASCRIPT</h3>
+			<br>
+			<br>
+			<img src="AAAAA.jpeg" width="100%">
+			<br>
+			<div class="bwh">
+			<h4>
+				Game POPCAT
+			</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+			</p>
+			<a href="https://popcat.romlisuhanda.relp.co/" target="_blank">
+				Mainkan Sekarang..
+			</a>
+			</div>
+			<br>
+			<img src="gmy.jpeg" width="100%">
+			<br>
+			<div class="bwh">
+			<h4>
+				Game Ular 3D 
+			</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+			</p>
+			<a href="https://romlisuhanda.github.io/gameular3D/" target="_blank">
+				Mainkan Sekarang..
+			</a>
 			</div>
 		</section>
 
@@ -628,7 +700,7 @@
 		</section>
 
 		<script type="text/javascript">
-			window.onscroll = function () {
+			window.onscroll = () => {
 				const head = document.querySelector('header');
 				const fixed = head.offsetTop;
 				if(window.pageYOffset > fixed) {
